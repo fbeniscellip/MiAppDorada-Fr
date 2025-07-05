@@ -1,0 +1,6 @@
+node_modules/
+.angular/
+.DS_Store
+*.log
+ionic.config 2.json
+

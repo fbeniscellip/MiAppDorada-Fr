@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Citas Médicas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="calendario-content">
+  <p class="subtitulo">Aquí puedes revisar tus próximas consultas</p>
+
+  <ion-list>
+    <ion-item *ngFor="let cita of citas; let i = index" (click)="editarCita(i)">
+      <ion-label>
+        <h3>{{ cita.fecha }}</h3>
+        <p><strong>Hora:</strong> {{ cita.hora }}</p>
+        <p><strong>Médico:</strong> {{ cita.medico }}</p>
+        <p><strong>Lugar:</strong> {{ cita.lugar }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+
+  <ion-button expand="block" color="primary" fill="outline" (click)="abrirModal()">
+    <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+    Agendar nueva cita
+  </ion-button>
+  
+  <ion-button expand="block" color="danger" fill="solid" (click)="borrarCitas()">
+    <ion-icon name="trash-outline" slot="start"></ion-icon>
+    Borrar todas las citas
+  </ion-button>
+  

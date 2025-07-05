@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="header-morado">
+     <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Medicamentos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="abrirModal()">
+        <img src="assets/icon/addwhite.png" alt="add" class="icono-input" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="medicamentos.length === 0" class="mensaje-vacio">
+    <p>Aún no has agregado medicamentos.</p>
+  </div>
+
+  <ion-list *ngIf="medicamentos.length > 0">
+    <ion-item *ngFor="let medicamento of medicamentos; let i = index">
+      <ion-label>
+        <h2>{{ medicamento.nombre }}</h2>
+        <p><strong>Dosis:</strong> {{ medicamento.dosis }}</p>
+        <p><strong>Hora:</strong> {{ medicamento.hora }}</p>
+        <p *ngIf="medicamento.frecuencia"><strong>Frecuencia:</strong> {{ medicamento.frecuencia }}</p>
+        <p *ngIf="medicamento.notas"><strong>Notas:</strong> {{ medicamento.notas }}</p>
+      </ion-label>
+
+      <ion-buttons slot="end">
+        <ion-button color="primary" (click)="editarMedicamento(i)">
+          <img src="assets/icon/edit.png" alt="edit" class="icono-input" />
+        </ion-button>
+        <ion-button color="danger" (click)="eliminarMedicamento(i)">
+          <img src="assets/icon/eliminar.png" alt="trash" class="icono-input" />
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

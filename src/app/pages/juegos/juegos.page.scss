@@ -1,0 +1,25 @@
+.juego-card {
+  border-radius: 20px;
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.juego-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Colores específicos para cada juego */
+.memorice-card {
+  background-color: #ede7f6; // Lavanda
+  color: #4a148c;
+}
+
+.colores-card {
+  background-color: #e3f2fd; // Celeste
+  color: #1565c0;
+}

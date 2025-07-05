@@ -1,0 +1,35 @@
+.ejercicio-card {
+    font-size: 1.2rem;
+    border-radius: 20px;
+    margin: 14px 8px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+  }
+  
+  .ejercicio-card:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Colores suaves por categoría */
+  .color-brazos {
+    background-color: #e1f5fe; /* Celeste */
+    color: #01579b;
+  }
+  
+  .color-rodillas {
+    background-color: #f1f8e9; /* Verde suave */
+    color: #33691e;
+  }
+  
+  .color-cuello {
+    background-color: #fce4ec; /* Rosado claro */
+    color: #880e4f;
+  }
+  
+  .color-piernas {
+    background-color: #ede7f6; /* Lavanda */
+    color: #4527a0;
+  }
+  

@@ -1,0 +1,31 @@
+[{
+  "id": 101,
+  "titulo": "Respiración Guiada",
+  "descripcion": "Ejercicio de respiración para relajarte en casa.",
+  "categoria": "Relajación",
+  "color": "#00897b",
+  "icono": "leaf",
+  "pasosTexto": [],
+  "pasosImagen": []
+},
+{
+  "id": 102,
+  "titulo": "Manualidades",
+  "descripcion": "Ejercicio de respiración para relajarte en casa.",
+  "categoria": "Relajación",
+  "color": "#00897b",
+  "icono": "leaf",
+  "pasosTexto": [],
+  "pasosImagen": []
+},
+{
+  "id": 103,
+  "titulo": "Receta de Cocina",
+  "descripcion": "Galletas de avena y plátano.",
+  "categoria": "Otras Actividades",
+  "color": "#00897b",
+  "icono": "leaf",
+  "pasosTexto": [],
+  "pasosImagen": []
+}
+]

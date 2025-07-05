@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar class="header-verde">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/actividades"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ categoriaSeleccionada }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Mostrar componente ejercicios si la categoría es "Ejercicios Físicos" -->
+  <ng-container *ngIf="categoriaSeleccionada === 'Ejercicios Físicos'; else mostrarActividades">
+    <app-ejercicios></app-ejercicios>
+  </ng-container>
+
+  <!-- Mostrar las otras actividades -->
+  <ng-template #mostrarActividades>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let actividad of actividadesFiltradas">
+          <ion-card (click)="abrirGuia(actividad)" class="subactividad-card">
+            <ion-card-header>
+              <ion-card-title>{{ actividad.titulo }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              {{ actividad.descripcion }}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+
+</ion-content>
+

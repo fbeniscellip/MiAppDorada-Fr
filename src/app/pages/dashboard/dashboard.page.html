@@ -1,0 +1,31 @@
+
+<ion-content class="dashboard-content">
+  <h1 class="titulo">Bienvenida a Mi App Dorada</h1>
+  <p class="subtitulo">¿Qué deseas hacer hoy?</p>
+
+  <div class="tarjetas-grid">
+    <ion-card class="tarjeta tarjeta-calendario" (click)="goTo('calendario')">
+      <img src="assets/icon/citaMedica.png" alt="Calendario" class="icono-img" />
+    </ion-card>
+
+    <ion-card class="tarjeta tarjeta-medicamentos" (click)="goTo('medicamentos')">
+      <img src="assets/icon/medicamentos.png" alt="Medicamentos" class="icono-img" />
+    </ion-card>
+
+    <ion-card class="tarjeta tarjeta-panoramas" (click)="goTo('panoramas')">
+      <img src="assets/icon/panoramas.png" alt="Panoramas" class="icono-img" />
+    </ion-card>
+
+    <ion-card class="tarjeta tarjeta-actividades" (click)="goTo('actividades')">
+      <img src="assets/icon/actividades.png" alt="actividades" class="icono-img" />
+    </ion-card>
+
+    <ion-card class="tarjeta tarjeta-consejos" (click)="goTo('consejos')">
+      <img src="assets/icon/consejos.png" alt="Consejos" class="icono-img" />
+    </ion-card>
+
+    <ion-card class="tarjeta tarjeta-panico" (click)="goTo('panic')">
+      <img src="assets/icon/botonPanico.png" alt="Botón de Pánico" class="icono-img" />
+    </ion-card>
+  </div>
+</ion-content>
