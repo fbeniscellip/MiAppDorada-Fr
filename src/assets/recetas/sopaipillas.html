@@ -1,0 +1,111 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    color: #bf360c;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  ul, ol {
+    margin-left: 20px;
+  }
+
+  strong {
+    color: #bf360c;
+  }
+  body {
+    background-color: #fff7f0;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    margin-bottom: 80px; /* 🟢 Espacio para el footer */
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sopaipillas con Zapallo</title>
+</head>
+<body>
+  <h1>Sopaipillas con Zapallo</h1>
+  <img src="../img/Sopaipillas.png" alt="Sopaipillas calientes" width="100%">
+  <p><strong>Descripción:</strong> Receta tradicional chilena perfecta para días fríos. Crujientes por fuera, suaves por dentro, y deliciosas con pebre o chancaca.</p>
+
+  <h3>Ingredientes:</h3>
+  <ul>
+    <li>2 tazas de harina</li>
+    <li>1 taza de zapallo cocido y molido</li>
+    <li>2 cucharadas de manteca o margarina</li>
+    <li>1 cucharadita de sal</li>
+    <li>1 cucharadita de polvo de hornear</li>
+    <li>Aceite para freír</li>
+  </ul>
+
+  <h3>Preparación:</h3>
+  <ol>
+    <li>Mezcla la harina con el polvo de hornear y la sal.</li>
+    <li>Agrega el zapallo molido y la manteca derretida.</li>
+    <li>Amasa hasta lograr una masa suave y homogénea.</li>
+    <li>Estira con uslero y corta en círculos.</li>
+    <li>Fríe en aceite caliente hasta dorar.</li>
+  </ol>
+
+  <h3>Información Nutricional (por unidad aprox):</h3>
+  <ul>
+    <li>Calorías: 150</li>
+    <li>Carbohidratos: 18g</li>
+    <li>Grasas: 7g</li>
+    <li>Proteínas: 2g</li>
+  </ul>
+
+  <p><strong>Tiempo estimado:</strong> 45 minutos</p>
+  <p><strong>Dificultad:</strong> Fácil</p>
+
+  <div style="
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #f5f5f5;
+text-align: center;
+padding: 12px 0;
+border-top: 1px solid #ccc;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+z-index: 999;
+">
+<button onclick="volverAOtrasActividades()" style="
+  background: none;
+  border: none;
+  color: #00796b;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+">
+  ← Volver a Otras Actividades
+</button>
+</div>
+
+<script>
+  function volverAOtrasActividades() {
+    localStorage.setItem('volverCategoria', 'Otras Actividades');
+    window.location.href = '/actividades';
+  }
+</script>
+</body>
+
+
+</html>

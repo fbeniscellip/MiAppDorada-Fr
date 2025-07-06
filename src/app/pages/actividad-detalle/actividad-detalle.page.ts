@@ -30,14 +30,19 @@ export class ActividadDetallePage implements OnInit {
   constructor(private router: Router, private http: HttpClient) {
     const nav = this.router.getCurrentNavigation();
     const state = nav?.extras?.state as { categoria: string };
+  
     if (state?.categoria) {
       this.categoriaSeleccionada = state.categoria;
-
-      // ✅ Si es Juegos, redirige directamente a la lista de juegos
-      if (this.categoriaSeleccionada === 'Juegos') {
-        this.router.navigate(['/juegos']);
-        return;
-      }
+    } else {
+      // 🔁 Si no viene del router, intenta cargar desde localStorage
+      const categoriaGuardada = localStorage.getItem('volverCategoria');
+      this.categoriaSeleccionada = categoriaGuardada || 'Otras Actividades';
+      localStorage.removeItem('volverCategoria');
+    }
+    // ✅ Si es Juegos, redirige directamente
+    if (this.categoriaSeleccionada === 'Juegos') {
+      this.router.navigate(['/juegos']);
+      return;
     }
   }
 
@@ -48,7 +53,9 @@ export class ActividadDetallePage implements OnInit {
   }
 
   abrirGuia(actividad: any) {
-    if (actividad.titulo === 'Respiración Guiada') {
+    if (actividad.html) {
+      window.open(actividad.html, '_blank');
+    } else if (actividad.titulo === 'Respiración Guiada') {
       this.router.navigateByUrl('/respiracion');
     } else {
       this.router.navigateByUrl('/actividad-guia', {

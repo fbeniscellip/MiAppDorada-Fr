@@ -3,7 +3,7 @@
   "titulo": "Respiración Guiada",
   "descripcion": "Ejercicio de respiración para relajarte en casa.",
   "categoria": "Relajación",
-  "color": "#00897b",
+  "color": "#CDEDF6",
   "icono": "leaf",
   "pasosTexto": [],
   "pasosImagen": []
@@ -13,18 +13,41 @@
   "titulo": "Manualidades",
   "descripcion": "Ejercicio de respiración para relajarte en casa.",
   "categoria": "Relajación",
-  "color": "#00897b",
+  "color": "#D8F3DC",
   "icono": "leaf",
   "pasosTexto": [],
   "pasosImagen": []
 },
 {
-  "id": 103,
-  "titulo": "Receta de Cocina",
-  "descripcion": "Galletas de avena y plátano.",
+  "id": 201,
+  "titulo": "Sopaipillas con zapallo",
+  "descripcion": "Receta tradicional chilena para días fríos.",
   "categoria": "Otras Actividades",
-  "color": "#00897b",
-  "icono": "leaf",
+  "color": "#D8F3DC",  
+  "icono": "restaurant",
+  "html":"assets/recetas/sopaipillas.html",
+  "pasosTexto": [],
+  "pasosImagen": []
+},
+{
+  "id": 202,
+  "titulo": "Pan amasado",
+  "descripcion": "Pan casero ideal para acompañar con té o mate.",
+  "categoria": "Otras Actividades",
+  "color": "#FAD2E1",  
+  "icono": "cafe",
+  "html":"assets/recetas/pan-amasado.html",
+  "pasosTexto": [],
+  "pasosImagen": []
+},
+{
+  "id": 203,
+  "titulo": "Galletas de avena y plátano",
+  "descripcion": "Galletas saludables y fáciles de preparar.",
+  "categoria": "Otras Actividades",
+  "color": "#CDEDF6",  
+  "icono": "nutrition",
+  "html":"assets/recetas/galletas-avena.html",
   "pasosTexto": [],
   "pasosImagen": []
 }

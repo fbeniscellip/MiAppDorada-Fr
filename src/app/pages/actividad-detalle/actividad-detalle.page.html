@@ -19,7 +19,10 @@
     <ion-grid>
       <ion-row>
         <ion-col size="12" size-md="6" *ngFor="let actividad of actividadesFiltradas">
-          <ion-card (click)="abrirGuia(actividad)" class="subactividad-card">
+          <ion-card 
+            class="subactividad-card"
+            [style.background]="actividad.color"
+            (click)="abrirGuia(actividad)">
             <ion-card-header>
               <ion-card-title>{{ actividad.titulo }}</ion-card-title>
             </ion-card-header>

@@ -28,10 +28,17 @@ export class ActividadesPage implements OnInit {
     this.categorias = [
       { nombre: 'Ejercicios Físicos', color: '#43a047', imagen: 'walk' },
       { nombre: 'Ejercicios Mentales', color: '#5e35b1', imagen: 'brain' },
-      { nombre: 'Juegos', color: '#039be5', imagen: 'puzzle', ruta: '/juegos' }, // 🔄 CORREGIDO
+      { nombre: 'Juegos', color: '#039be5', imagen: 'puzzle', ruta: '/juegos' },
       { nombre: 'Relajación', color: '#00897b', imagen: 'relajacion' },
       { nombre: 'Otras Actividades', color: '#ffb300', imagen: 'recetario' }
     ];
+
+    // 🔄 Revisa si hay que redirigir a una categoría específica (como desde receta)
+    const volverCategoria = localStorage.getItem('volverCategoria');
+    if (volverCategoria) {
+      localStorage.removeItem('volverCategoria');
+      this.abrirDetalle(volverCategoria);
+    }
   }
 
   abrirDetalle(nombreCategoria: string) {
